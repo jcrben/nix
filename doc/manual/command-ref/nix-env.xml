@@ -1271,7 +1271,8 @@ $ nix-env -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -qa
 <para>This operation makes <replaceable>path</replaceable> the current
 profile for the user.  That is, the symlink
 <filename>~/.nix-profile</filename> is made to point to
-<replaceable>path</replaceable>.</para>
+<replaceable>path</replaceable>. The target symlink will only be created after
+installing a package in the profile.</para>
 
 </refsection>
 
@@ -1458,7 +1459,7 @@ error: no generation older than the current (91) exists</screen>
 <refsection condition="manpage"><title>Environment variables</title>
 
 <variablelist>
-  
+
   <varlistentry><term><envar>NIX_PROFILE</envar></term>
 
     <listitem><para>Location of the Nix profile.  Defaults to the
@@ -1472,6 +1473,6 @@ error: no generation older than the current (91) exists</screen>
 </variablelist>
 
 </refsection>
-  
+
 
 </refentry>

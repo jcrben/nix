@@ -137,11 +137,11 @@ $ nix-env --switch-profile /nix/var/nix/profiles/my-profile
 $ nix-env --switch-profile /nix/var/nix/profiles/default</screen>
 
 These commands switch to the <filename>my-profile</filename> and
-default profile, respectively.  If the profile doesn’t exist, it will
-be created automatically.  You should be careful about storing a
-profile in another location than the <filename>profiles</filename>
-directory, since otherwise it might not be used as a root of the
-garbage collector (see <xref linkend='sec-garbage-collection'
+default profile, respectively. If the profile doesn’t exist, it will
+be created automatically after a package is installed into the profile.
+You should be careful about storing a profile in another location than the
+<filename>profiles</filename> directory, since otherwise it might not be used as
+ a root of the garbage collector (see <xref linkend='sec-garbage-collection'
 />).</para>
 
 <para>All <command>nix-env</command> operations work on the profile
